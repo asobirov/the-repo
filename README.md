@@ -42,7 +42,7 @@ packages
      └─ typesafe db-calls using Prisma
 ```
 
-> In this template, we use `@acme` as a placeholder for package names. As a user, you might want to replace it with your own organization or project name. You can use find-and-replace to change all the instances of `@acme/` to something like `@my-company/` / `@project-name/`.
+> In this template, we use `@the-repo` as a placeholder for package names. As a user, you might want to replace it with your own organization or project name. You can use find-and-replace to change all the instances of `@the-repo/` to something like `@my-company/` / `@project-name/`.
 
 ## FAQ
 
