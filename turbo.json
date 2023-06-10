@@ -23,7 +23,7 @@
     "clean": {
       "cache": false
     },
-    "//#clean": {
+    "#clean": {
       "cache": false
     },
     "type-check": {
