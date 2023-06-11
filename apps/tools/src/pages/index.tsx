@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 
-import { Button } from "@the-repo/ui/components/button";
+import { Button } from "@the-repo/ui";
 
 const Home: NextPage = () => {
   return (
