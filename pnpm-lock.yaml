@@ -48,13 +48,13 @@ importers:
         specifier: ^4.29.5
         version: 4.29.5(react-dom@18.2.0)(react-native@0.71.8)(react@18.2.0)
       '@the-repo/api':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/api
       '@the-repo/auth':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/auth
       '@the-repo/db':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/db
       '@trpc/client':
         specifier: ^10.27.1
@@ -88,10 +88,10 @@ importers:
         version: 3.21.4
     devDependencies:
       '@the-repo/eslint-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/config/eslint
       '@the-repo/tailwind-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/config/tailwind
       '@types/node':
         specifier: ^18.16.5
@@ -194,13 +194,13 @@ importers:
         specifier: ^6.0.1
         version: 6.0.1
       '@the-repo/api':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/api
       '@the-repo/eslint-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/config/eslint
       '@the-repo/tailwind-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/config/tailwind
       '@types/babel__core':
         specifier: ^7.20.0
@@ -321,13 +321,13 @@ importers:
         specifier: ^4.29.5
         version: 4.29.5(react-dom@18.2.0)(react-native@0.71.8)(react@18.2.0)
       '@the-repo/api':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/api
       '@the-repo/auth':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/auth
       '@the-repo/db':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/db
       '@trpc/client':
         specifier: ^10.27.1
@@ -361,10 +361,10 @@ importers:
         version: 3.21.4
     devDependencies:
       '@the-repo/eslint-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/config/eslint
       '@the-repo/tailwind-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../../packages/config/tailwind
       '@types/node':
         specifier: ^18.16.5
@@ -397,10 +397,10 @@ importers:
   packages/api:
     dependencies:
       '@the-repo/auth':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../auth
       '@the-repo/db':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../db
       '@trpc/client':
         specifier: ^10.27.1
@@ -416,7 +416,7 @@ importers:
         version: 3.21.4
     devDependencies:
       '@the-repo/eslint-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../config/eslint
       eslint:
         specifier: ^8.40.0
@@ -434,7 +434,7 @@ importers:
         specifier: ^0.3.1
         version: 0.3.1(typescript@5.0.4)(zod@3.21.4)
       '@the-repo/db':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../db
       next:
         specifier: ^13.4.2
@@ -453,7 +453,7 @@ importers:
         version: 3.21.4
     devDependencies:
       '@the-repo/eslint-config':
-        specifier: ^0.1.0
+        specifier: workspace:*
         version: link:../config/eslint
       eslint:
         specifier: ^8.40.0
@@ -601,7 +601,7 @@ importers:
         specifier: ^3.3.2
         version: 3.3.2
       tsup:
-        specifier: ^6.2.3
+        specifier: ^6.7.0
         version: 6.7.0(postcss@8.4.23)(typescript@5.0.4)
       typescript:
         specifier: ^5.0.4

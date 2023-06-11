@@ -33,9 +33,9 @@
     "superjson": "1.9.1"
   },
   "devDependencies": {
-    "@the-repo/api": "^0.1.0",
-    "@the-repo/eslint-config": "^0.1.0",
-    "@the-repo/tailwind-config": "^0.1.0",
+    "@the-repo/api": "workspace:*",
+    "@the-repo/eslint-config": "workspace:*",
+    "@the-repo/tailwind-config": "workspace:*",
     "@babel/core": "^7.21.8",
     "@babel/preset-env": "^7.21.5",
     "@babel/runtime": "^7.21.5",
