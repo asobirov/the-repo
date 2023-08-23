@@ -1,9 +1,9 @@
-import type { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-export default {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+  content: ["src/**/*.{ts,tsx}"],
   theme: {
     container: {
       center: true,
@@ -80,5 +80,9 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+    require('tailwind-scrollbar'),
+  ],
+};

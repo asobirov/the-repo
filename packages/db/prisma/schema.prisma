@@ -3,18 +3,11 @@
 
 generator client {
     provider = "prisma-client-js"
-    previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
     provider = "postgresql"
     url      = env("DATABASE_URL")
-}
-
-model Post {
-    id      String @id @default(cuid())
-    title   String
-    content String
 }
 
 // NextAuth.js Models
@@ -55,6 +48,8 @@ model User {
     image         String?
     accounts      Account[]
     sessions      Session[]
+
+    Post Post[]
 }
 
 model VerificationToken {
@@ -63,4 +58,16 @@ model VerificationToken {
     expires    DateTime
 
     @@unique([identifier, token])
+}
+
+model Post {
+    id        String   @id @default(cuid())
+    title     String
+    content   Json?
+    published Boolean  @default(false)
+    createdAt DateTime @default(now())
+    updatedAt DateTime @default(now())
+    authorId  String
+
+    author User @relation(fields: [authorId], references: [id])
 }
