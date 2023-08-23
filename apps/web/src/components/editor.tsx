@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import { useEffect, useRef, useState, useCallback } from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import type EditorJS from "@editorjs/editorjs"
@@ -13,6 +14,7 @@ import type * as z from "zod"
 import { cn } from "@/utils";
 import { postPatchSchema } from "@/lib/validations/post"
 import { buttonVariants, toast, Icons } from "@the-repo/ui";
+import { api } from "@/utils/api"
 
 interface EditorProps {
   post: Pick<Post, "id" | "title" | "content" | "published">
@@ -24,12 +26,12 @@ export function Editor({ post }: EditorProps) {
   const { register, handleSubmit } = useForm<FormData>({
     resolver: zodResolver(postPatchSchema),
   })
-  const ref = React.useRef<EditorJS>()
+  const ref = useRef<EditorJS>()
   const router = useRouter()
-  const [isSaving, setIsSaving] = React.useState<boolean>(false)
-  const [isMounted, setIsMounted] = React.useState<boolean>(false)
+  const [isSaving, setIsSaving] = useState<boolean>(false)
+  const [isMounted, setIsMounted] = useState<boolean>(false)
 
-  const initializeEditor = React.useCallback(async () => {
+  const initializeEditor = useCallback(async () => {
     const EditorJS = (await import("@editorjs/editorjs")).default
     // @ts-ignore
     const Header = (await import("@editorjs/header")).default
@@ -70,13 +72,13 @@ export function Editor({ post }: EditorProps) {
     }
   }, [post])
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       setIsMounted(true)
     }
   }, [])
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isMounted) {
       void initializeEditor()
 
@@ -87,37 +89,32 @@ export function Editor({ post }: EditorProps) {
     }
   }, [isMounted, initializeEditor])
 
+  const updatePostMutation = api.post.update.useMutation({
+    onSettled: () => {
+        setIsSaving(false);
+    },
+    onSuccess: () => {
+        toast({description: "Your post has been saved."})
+    },
+    onError: (error) => {
+        toast({
+            title: "Something went wrong.",
+            description: "Your post was not saved. Please try again. Erorr: " + error.message,
+            variant: "destructive",
+          })
+    }
+  });
+
   async function onSubmit(data: FormData) {
     setIsSaving(true)
 
     const blocks = await ref.current?.save()
 
-    const response = await fetch(`/api/posts/${post.id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
+    updatePostMutation.mutate({
+        id: post.id,
         title: data.title,
         content: blocks,
-      }),
-    })
-
-    setIsSaving(false)
-
-    if (!response?.ok) {
-      return toast({
-        title: "Something went wrong.",
-        description: "Your post was not saved. Please try again.",
-        variant: "destructive",
-      })
-    }
-
-    router.refresh()
-
-    return toast({
-      description: "Your post has been saved.",
-    })
+    })    
   }
 
   if (!isMounted) {
@@ -130,7 +127,7 @@ export function Editor({ post }: EditorProps) {
         <div className="flex w-full items-center justify-between">
           <div className="flex items-center space-x-10">
             <Link
-              href="/dashboard"
+              href="/editor"
               className={cn(buttonVariants({ variant: "ghost" }))}
             >
               <>

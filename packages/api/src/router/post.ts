@@ -1,27 +1,72 @@
 import { z } from "zod";
 
-import { createTRPCRouter, publicProcedure } from "../trpc";
+import { createTRPCRouter, protectedProcedure, publicProcedure } from "../trpc";
 
 export const postRouter = createTRPCRouter({
-  all: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.post.findMany({ orderBy: { id: "desc" } });
-  }),
   byId: publicProcedure
-    .input(z.object({ id: z.string() }))
-    .query(({ ctx, input }) => {
-      return ctx.prisma.post.findFirst({ where: { id: input.id } });
+    .input(z.object({ postId: z.string(), authorId: z.string().optional() }))
+    .query(async ({ ctx, input: {
+      postId,
+      authorId
+    } }) => {
+      const { session } = ctx;
+      const aId = authorId ?? session?.user.id;
+
+      if (!aId) throw new Error('No author provided');
+
+      const post = await ctx.prisma.post.findFirst({
+        where: {
+          id: postId,
+          authorId: aId
+        },
+      })
+
+      return post;
     }),
-  create: publicProcedure
+  create: protectedProcedure
     .input(
       z.object({
         title: z.string().min(1),
-        content: z.string().min(1),
+        content: z.any(),
       }),
     )
-    .mutation(({ ctx, input }) => {
-      return ctx.prisma.post.create({ data: input });
+    .mutation(({ ctx, input: {
+      title,
+      content
+    } }) => {
+      const {session} = ctx;
+
+      return ctx.prisma.post.create({
+        data: {
+          authorId: session.user.id,
+          title,
+          content
+        }
+      });
     }),
-  delete: publicProcedure.input(z.string()).mutation(({ ctx, input }) => {
+  update: protectedProcedure
+    .input(
+      z.object({
+        id: z.string(),
+        title: z.string().min(1).optional(),
+        content: z.any().optional(),
+      }),
+    )
+    .mutation(({ ctx, input: {
+      id,
+      title,
+      content
+    } }) => {
+      console.log('id', id);
+      return ctx.prisma.post.update({
+        where: { id },
+        data: {
+          title,
+          content
+        }
+      });
+    }),
+  delete: protectedProcedure.input(z.string()).mutation(({ ctx, input }) => {
     return ctx.prisma.post.delete({ where: { id: input } });
   }),
 });
