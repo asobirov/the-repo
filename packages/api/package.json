@@ -11,16 +11,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@the-repo/auth": "workspace:*",
-    "@the-repo/db": "workspace:*",
-    "@trpc/client": "^10.27.1",
-    "@trpc/server": "^10.27.1",
+    "@the-repo/auth": "^0.1.0",
+    "@the-repo/db": "^0.1.0",
+    "@trpc/client": "^10.34.0",
+    "@trpc/server": "^10.34.0",
     "superjson": "1.9.1",
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@the-repo/eslint-config": "workspace:*",
-    "eslint": "^8.40.0",
-    "typescript": "^5.0.4"
+    "@the-repo/eslint-config": "^0.2.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.1.6"
   }
 }
