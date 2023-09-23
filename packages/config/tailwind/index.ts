@@ -74,6 +74,9 @@ export default {
           },
         },
       },
+      transitionTimeingFunction: {
+        ease: "ease",
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
@@ -81,8 +84,8 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-animate'),
-    require('@tailwindcss/typography'),
-    require('tailwind-scrollbar'),
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    require("tailwind-scrollbar"),
   ],
 } satisfies Config;
