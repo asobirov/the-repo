@@ -1,1 +1,1 @@
-@the-repo/web
+@tr/web

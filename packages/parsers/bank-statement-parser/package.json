@@ -1,5 +1,5 @@
 {
-  "name": "@the-repo/bank-statement-parser",
+  "name": "@tr/bank-statement-parser",
   "version": "0.0.0",
   "private": true,
   "scripts": {

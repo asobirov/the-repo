@@ -1,5 +1,5 @@
 {
-  "name": "@the-repo/root",
+  "name": "@tr/root",
   "private": true,
   "engines": {
     "node": ">=v18.16.0"

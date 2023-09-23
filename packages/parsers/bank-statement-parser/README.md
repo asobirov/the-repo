@@ -1,1 +1,1 @@
-# `@the-repo/bank-statement-parser`
+# `@tr/bank-statement-parser`

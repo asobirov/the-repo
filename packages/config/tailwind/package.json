@@ -1,5 +1,5 @@
 {
-  "name": "@the-repo/tailwind-config",
+  "name": "@tr/tailwind-config",
   "version": "0.1.0",
   "main": "index.ts",
   "license": "MIT",

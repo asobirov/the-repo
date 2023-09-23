@@ -1,5 +1,5 @@
 {
-  "name": "@the-repo/web",
+  "name": "@tr/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,9 +15,9 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.6.0",
     "@tanstack/react-query": "^4.29.23",
-    "@the-repo/api": "^0.1.0",
-    "@the-repo/auth": "^0.1.0",
-    "@the-repo/db": "^0.1.0",
+    "@tr/api": "^0.1.0",
+    "@tr/auth": "^0.1.0",
+    "@tr/db": "^0.1.0",
     "@trpc/client": "^10.34.0",
     "@trpc/next": "^10.34.0",
     "@trpc/react-query": "^10.34.0",
@@ -32,8 +32,8 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@the-repo/eslint-config": "^0.2.0",
-    "@the-repo/tailwind-config": "^0.1.0",
+    "@tr/eslint-config": "^0.2.0",
+    "@tr/tailwind-config": "^0.1.0",
     "@types/node": "^18.16.5",
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
