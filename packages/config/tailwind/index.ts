@@ -74,6 +74,8 @@ export default {
           },
         },
       },
+
+      // TODO: To remove. This was temporary needed for @tr/portfolio migration
       transitionTimingFunction: {
         ease: "ease",
       },
