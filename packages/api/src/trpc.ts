@@ -6,13 +6,13 @@
  * tl;dr - this is where all the tRPC server stuff is created and plugged in.
  * The pieces you will need to use are documented accordingly near the end
  */
-import { TRPCError, initTRPC } from "@trpc/server";
-import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
+import { getServerSession } from "@tr/auth";
+import type { Session } from "@tr/auth";
+import { prisma } from "@tr/db";
+import { initTRPC, TRPCError } from "@trpc/server";
+import type { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";
 import { ZodError } from "zod";
-
-import { getServerSession, type Session } from "@the-repo/auth";
-import { prisma } from "@the-repo/db";
 
 /**
  * 1. CONTEXT
@@ -23,9 +23,9 @@ import { prisma } from "@the-repo/db";
  * processing a request
  *
  */
-type CreateContextOptions = {
+interface CreateContextOptions {
   session: Session | null;
-};
+}
 
 /**
  * This helper generates the "internals" for a tRPC context. If you need to use

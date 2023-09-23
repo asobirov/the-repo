@@ -1,9 +1,8 @@
 {
-  "extends": "@the-repo/tsconfig/nextjs.json",
+  "extends": "@tr/tsconfig/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
       "@/*": ["./src/*"]
     },
     "plugins": [{ "name": "next" }]

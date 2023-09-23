@@ -1,4 +1,4 @@
-# @the-repo
+# @tr
 
 <picture>
    <source media="(prefers-color-scheme: dark)" alt="the repo deps" srcset="https://cdn.xpr.im/projects/ed/the-repo-deps-v0.0.1.png
@@ -11,12 +11,12 @@
 
 ### apps
 
-- [] @the-repo/auth - Auth web app
-- [] @the-repo/ed - Excalidraw self-hosted web app
-- [] @the-repo/notes - Notes web app
-- [] @the-repo/files - Files manager web app
-- [] @the-repo/tts - Text to speech web app
-- [] @the-repo/cli - CLI app, includes some features from the web apps
+- [] @tr/auth - Auth web app
+- [] @tr/ed - Excalidraw self-hosted web app
+- [] @tr/notes - Notes web app
+- [] @tr/files - Files manager web app
+- [] @tr/tts - Text to speech web app
+- [] @tr/cli - CLI app, includes some features from the web apps
 
 ### packages
 

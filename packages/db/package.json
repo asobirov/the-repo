@@ -1,5 +1,5 @@
 {
-  "name": "@the-repo/db",
+  "name": "@tr/db",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -14,11 +14,11 @@
     "with-env": "dotenv -e ../../.env --"
   },
   "dependencies": {
-    "@prisma/client": "^4.14.1"
+    "@prisma/client": "^5.0.0"
   },
   "devDependencies": {
     "dotenv-cli": "^7.2.1",
-    "prisma": "^4.14.1",
-    "typescript": "^5.0.4"
+    "prisma": "^5.0.0",
+    "typescript": "^5.1.6"
   }
 }

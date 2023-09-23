@@ -72,3 +72,50 @@ model Post {
 
     author User @relation(fields: [authorId], references: [id])
 }
+
+// 
+
+model Transaction {
+    id String @id @default(cuid())
+
+    description String
+    amount      Float
+    balance     Float
+
+    type   TransactionType @relation(fields: [typeId], references: [id])
+    typeId String
+
+    category   TransactionCategory? @relation(fields: [categoryId], references: [id])
+    categoryId String?
+
+    transactionDate DateTime
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model TransactionType {
+    id String @id @default(cuid())
+
+    code        String
+    description String?
+
+    transactions Transaction[]
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model TransactionCategory {
+    id String @id @default(cuid())
+
+    name String
+
+    // String to check for similarity in transaction description
+    // e.g. "Pizza", "Pizza Hut"
+    stringMatch String
+
+    createdAt   DateTime      @default(now())
+    updatedAt   DateTime      @updatedAt
+    Transaction Transaction[]
+}

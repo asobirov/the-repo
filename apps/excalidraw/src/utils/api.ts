@@ -1,8 +1,7 @@
+import type { AppRouter } from "@tr/api";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
 import superjson from "superjson";
-
-import type { AppRouter } from "@the-repo/api";
 
 const getBaseUrl = () => {
   if (typeof window !== "undefined") return ""; // browser should use relative url
@@ -30,4 +29,4 @@ export const api = createTRPCNext<AppRouter>({
   ssr: false,
 });
 
-export { type RouterInputs, type RouterOutputs } from "@the-repo/api";
+export { type RouterInputs, type RouterOutputs } from "@tr/api";
