@@ -187,6 +187,9 @@ importers:
       '@tailwindcss/line-clamp':
         specifier: ^0.4.2
         version: 0.4.2(tailwindcss@3.3.3)
+      '@tr/tailwind-config':
+        specifier: workspace:^
+        version: link:../../packages/config/tailwind
       '@types/gtag.js':
         specifier: ^0.0.11
         version: 0.0.11
@@ -262,7 +265,7 @@ importers:
     dependencies:
       '@next-auth/prisma-adapter':
         specifier: ^1.0.6
-        version: 1.0.6(@prisma/client@4.1.0)(next-auth@4.22.1)
+        version: 1.0.6(@prisma/client@5.0.0)(next-auth@4.22.1)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.1.6)(zod@3.21.4)
@@ -1797,13 +1800,13 @@ packages:
       read-yaml-file: 1.1.0
     dev: false
 
-  /@next-auth/prisma-adapter@1.0.6(@prisma/client@4.1.0)(next-auth@4.22.1):
+  /@next-auth/prisma-adapter@1.0.6(@prisma/client@5.0.0)(next-auth@4.22.1):
     resolution: {integrity: sha512-Z7agwfSZEeEcqKqrnisBun7VndRPshd6vyDsoRU68MXbkui8storkHgvN2hnNDrqr/hSCF9aRn56a1qpihaB4A==}
     peerDependencies:
       '@prisma/client': '>=2.26.0 || >=3'
       next-auth: ^4
     dependencies:
-      '@prisma/client': 4.1.0
+      '@prisma/client': 5.0.0(prisma@5.0.0)
       next-auth: 4.22.1(next@13.5.2)(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
@@ -1935,6 +1938,7 @@ packages:
         optional: true
     dependencies:
       '@prisma/engines-version': 4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8
+    dev: true
 
   /@prisma/client@5.0.0(prisma@5.0.0):
     resolution: {integrity: sha512-XlO5ELNAQ7rV4cXIDJUNBEgdLwX3pjtt9Q/RHqDpGf43szpNJx2hJnggfFs7TKNx0cOFsl6KJCSfqr5duEU/bQ==}
@@ -1952,6 +1956,7 @@ packages:
 
   /@prisma/engines-version@4.1.0-48.8d8414deb360336e4698a65aa45a1fbaf1ce13d8:
     resolution: {integrity: sha512-cRRJwpHFGFJZvtHbY3GZjMffNBEjjZk68ztn+S2hDgPCGB4H66IK26roK94GJxBodSehwRJ0wGyebC2GoIH1JQ==}
+    dev: true
 
   /@prisma/engines-version@4.17.0-26.6b0aef69b7cdfc787f822ecd7cdc76d5f1991584:
     resolution: {integrity: sha512-HHiUF6NixsldsP3JROq07TYBLEjXFKr6PdH8H4gK/XAoTmIplOJBCgrIUMrsRAnEuGyRoRLXKXWUb943+PFoKQ==}
