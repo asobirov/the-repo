@@ -74,7 +74,7 @@ export default {
           },
         },
       },
-      transitionTimeingFunction: {
+      transitionTimingFunction: {
         ease: "ease",
       },
       animation: {
