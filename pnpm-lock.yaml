@@ -181,6 +181,12 @@ importers:
       '@chakra-ui/react-utils':
         specifier: ^2.0.11
         version: 2.0.12(react@18.2.0)
+      '@chakra-ui/styled-system':
+        specifier: ^2.9.1
+        version: 2.9.1
+      '@chakra-ui/system':
+        specifier: ^2.6.1
+        version: 2.6.1(@emotion/react@11.0.0)(@emotion/styled@11.0.0)(react@18.2.0)
       '@prisma/client':
         specifier: ^4.1.0
         version: 4.1.0
