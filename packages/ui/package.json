@@ -1,5 +1,5 @@
 {
-  "name": "@tr/{{ name }}",
+  "name": "@tr/ui",
   "private": true,
   "version": "0.1.0",
   "exports": {
@@ -20,12 +20,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "react": "^18.2.0"
   },
   "devDependencies": {
     "@tr/eslint-config": "0.2.0",
     "@tr/prettier-config": "^0.1.0",
     "@tr/tsconfig": "^0.1.0",
-    "eslint": "^8.47.0",
+    "eslint": "^8.45.0",
     "typescript": "^5.2.2"
   },
   "eslintConfig": {
