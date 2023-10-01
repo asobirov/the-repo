@@ -11,5 +11,5 @@
   ],
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "tailwindCSS.experimental.configFile": "./packages/config/tailwind/index.ts"
+  "tailwindCSS.experimental.configFile": "./tooling/tailwind/index.ts"
 }
