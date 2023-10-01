@@ -1,0 +1,62 @@
+{
+  "name": "@tr/ui",
+  "private": true,
+  "version": "0.1.0",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./components/*": "./dist/components/*",
+    "./utils/*": "./dist/utils/*"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "src/*"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsup src --format esm,cjs --dts --external react",
+    "clean": "rm -rf dist .turbo node_modules",
+    "dev": "tsup src --format esm,cjs --watch --dts --external react",
+    "lint": "eslint .",
+    "format": "prettier --check \"**/*.{mjs,ts,md,json}\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@tr/eslint-config": "0.2.0",
+    "@tr/prettier-config": "^0.1.0",
+    "@tr/tsconfig": "^0.1.0",
+    "@types/node": "^18.16.5",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.45.0",
+    "postcss": "^8.4.26",
+    "react": "^18.2.0",
+    "tailwindcss": "^3.3.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "@tr/tailwind-config": "workspace:^",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^1.2.1",
+    "lucide-react": "^0.279.0",
+    "tailwind-merge": "^1.14.0",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@tr/eslint-config/base"
+    ]
+  },
+  "prettier": "@tr/prettier-config"
+}

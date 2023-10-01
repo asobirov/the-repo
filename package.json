@@ -2,7 +2,7 @@
   "name": "@tr/root",
   "private": true,
   "engines": {
-    "node": ">=v18.16.0"
+    "node": ">=v18.18.0"
   },
   "packageManager": "pnpm@8.6.7",
   "scripts": {
@@ -16,6 +16,7 @@
     "dev": "turbo dev --parallel",
     "dev:web": "turbo dev --parallel --filter=web...",
     "dev:tools": "turbo dev --parallel --filter=tools...",
+    "dev:portfolio": "turbo dev --parallel --filter=portfolio...",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
     "lint": "turbo lint && manypkg check",
     "lint:fix": "turbo lint:fix && manypkg fix",
@@ -24,9 +25,10 @@
   "dependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^4.1.0",
     "@manypkg/cli": "^0.21.0",
+    "@turbo/gen": "^1.10.14",
     "prettier": "^3.0.0",
     "prettier-plugin-tailwindcss": "^0.4.1",
-    "turbo": "^1.10.7",
-    "typescript": "^5.1.6"
+    "turbo": "^1.10.14",
+    "typescript": "^5.2.2"
   }
 }
