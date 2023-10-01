@@ -1,1 +1,1 @@
-export const name = 'ui';
+export {};

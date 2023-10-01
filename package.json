@@ -16,6 +16,7 @@
     "dev": "turbo dev --parallel",
     "dev:web": "turbo dev --parallel --filter=web...",
     "dev:tools": "turbo dev --parallel --filter=tools...",
+    "dev:portfolio": "turbo dev --parallel --filter=portfolio...",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
     "lint": "turbo lint && manypkg check",
     "lint:fix": "turbo lint:fix && manypkg fix",
