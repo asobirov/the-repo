@@ -1,5 +1,5 @@
 {
-  "name": "@tr/hn",
+  "name": "@tr/hacker-news",
   "version": "0.1.0",
   "private": true,
   "scripts": {
