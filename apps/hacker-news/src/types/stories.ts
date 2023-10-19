@@ -9,6 +9,8 @@ export type Story = {
   url: string;
 }
 
-export type StoriesList = Array<Story & {
+export type StoriesListItem = Story & {
   user: Pick<User, 'id' | 'karma'>;
-}>
+}
+
+export type StoriesList = Array<StoriesListItem>

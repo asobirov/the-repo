@@ -1,5 +1,6 @@
 "use client";
 
+import { StoryItem } from "@/components/story-item";
 import { StoriesList, Story, User } from "@/types";
 import { QueryFunction, useQuery } from "@tanstack/react-query";
 
@@ -44,7 +45,7 @@ export const getTopStories: QueryFunction<StoriesList> = async () => {
 
 
 export function StoriesList() {
-  const { data } = useQuery<StoriesList>({
+  const { data: stories } = useQuery<StoriesList>({
     queryKey: ["stories"],
     queryFn: getTopStories,
     // suspense: true,
@@ -52,8 +53,10 @@ export function StoriesList() {
   });
 
   return (
-    <pre className="text-xs">
-        {JSON.stringify(data, null, 2)}
-    </pre>
+    <div className="flex flex-col space-y-4">
+      {stories?.map(story => (
+        <StoryItem key={story.id} story={story} />
+      ))}
+    </div>
   )
 }

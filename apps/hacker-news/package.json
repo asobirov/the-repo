@@ -26,6 +26,8 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@tr/eslint-config": "workspace:^",
+    "@tr/prettier-config": "workspace:^",
     "@tr/tailwind-config": "workspace:^",
     "@types/node": "^18.16.5",
     "@types/react": "^18.2.6",
