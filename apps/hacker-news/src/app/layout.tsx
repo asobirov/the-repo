@@ -1,5 +1,6 @@
-import { ReactQueryProvider } from './providers'
-import '@/styles/globals.css'
+import { Providers } from '@/components/providers'
+// import '@/styles/globals.css'
+import "@tr/ui/styles/index.css";
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import { headers } from "next/headers";
@@ -19,9 +20,9 @@ export default function RootLayout({children}: { children: React.ReactNode }) {
   return (
     <html lang="en">
     <body className={["font-sans", poppins.variable].join(" ")}>
-      <ReactQueryProvider headers={headers()}>
+      <Providers headers={headers()}>
         {children}
-      </ReactQueryProvider>
+      </Providers>
     </body>
   </html>
   )

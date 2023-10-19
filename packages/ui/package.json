@@ -9,7 +9,8 @@
   "types": "./dist/index.d.ts",
   "exports": {
     "./components/*": "./dist/components/*",
-    "./utils/*": "./dist/utils/*"
+    "./utils/*": "./dist/utils/*",
+    "./styles/*": "./dist/styles/*"
   },
   "files": [
     "dist/**"
