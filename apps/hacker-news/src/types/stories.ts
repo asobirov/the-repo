@@ -1,4 +1,4 @@
-import {User} from './index';
+import { StoryUrlPreview, User } from "./index";
 
 export type Story = {
   id: number;
@@ -7,10 +7,11 @@ export type Story = {
   time: number;
   title: string;
   url: string;
-}
+};
 
 export type StoriesListItem = Story & {
-  user: Pick<User, 'id' | 'karma'>;
-}
+  user: Pick<User, "id" | "karma">;
+  preview: StoryUrlPreview | null;
+};
 
-export type StoriesList = Array<StoriesListItem>
+export type StoriesList = Array<StoriesListItem>;

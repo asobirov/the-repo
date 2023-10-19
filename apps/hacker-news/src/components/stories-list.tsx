@@ -2,6 +2,7 @@
 
 import { StoryItem } from "@/components/story-item";
 import { StoriesList, Story, User } from "@/types";
+import { fetchUrlMetadata } from "@/utils/fetchUrlMetadata";
 import { QueryFunction, useQuery } from "@tanstack/react-query";
 
 const baseUrl = "https://hacker-news.firebaseio.com/v0";
@@ -21,6 +22,14 @@ export const getStories = async (storyIds: number[]) => {
     )
   ) as Story[];
 
+  const preview = await Promise.all(
+    stories.map((story) =>
+      fetchUrlMetadata(story.url).then((meta) => meta)
+    )
+  )
+
+  console.log('preview:', preview);
+
   const users = await Promise.all(
     stories.map((story) =>
       fetch(`${baseUrl}/user/${story.by}.json`).then((user) => user.json())
@@ -33,14 +42,18 @@ export const getStories = async (storyIds: number[]) => {
       user: users
         .map((user) => ({ id: user.id, karma: user.karma }))
         .find((user) => user.id === story.by),
+      preview: preview
+        .find((meta) => meta && meta.url === story.url) ?? null,
     }))
     .sort((a, b) => a.score - b.score) as StoriesList
 }
 
 export const getTopStories: QueryFunction<StoriesList> = async () => {
   const storyIds = (await getTopStoriesIds()).slice(0, 10);
+  const stories = await getStories(storyIds)
 
-  return await getStories(storyIds);
+  console.log('stories', stories);
+  return stories;
 }
 
 
