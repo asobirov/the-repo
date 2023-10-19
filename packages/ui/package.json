@@ -10,8 +10,7 @@
   "exports": {
     "./components/*": "./dist/components/*",
     "./utils/*": "./dist/utils/*",
-    "./utils": "./dist/utils/index.js",
-    "./styles/*": "./dist/styles/*"
+    "./utils": "./dist/utils/index.js"
   },
   "files": [
     "dist/**"
