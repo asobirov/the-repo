@@ -1,6 +1,7 @@
 "use client";
 
-import { useQuery } from "@tanstack/react-query";
+import { StoriesList, Story, User } from "@/types";
+import { QueryFunction, useQuery } from "@tanstack/react-query";
 
 const baseUrl = "https://hacker-news.firebaseio.com/v0";
 const topStoriesUrl = `${baseUrl}/topstories.json`;
@@ -17,13 +18,13 @@ export const getStories = async (storyIds: number[]) => {
     storyIds.map((id) =>
       fetch(`${baseUrl}/item/${id}.json`).then((story) => story.json())
     )
-  );
+  ) as Story[];
 
   const users = await Promise.all(
     stories.map((story) =>
       fetch(`${baseUrl}/user/${story.by}.json`).then((user) => user.json())
     )
-  );
+  ) as User[]
 
   return stories
     .map((story) => ({
@@ -32,19 +33,20 @@ export const getStories = async (storyIds: number[]) => {
         .map((user) => ({ id: user.id, karma: user.karma }))
         .find((user) => user.id === story.by),
     }))
-    .sort((a, b) => a.score - b.score);
+    .sort((a, b) => a.score - b.score) as StoriesList
 }
 
-export const getTopStories = async () => {
+export const getTopStories: QueryFunction<StoriesList> = async () => {
   const storyIds = (await getTopStoriesIds()).slice(0, 10);
 
   return await getStories(storyIds);
 }
 
+
 export function StoriesList() {
-  const { data } = useQuery({
+  const { data } = useQuery<StoriesList>({
     queryKey: ["stories"],
-    queryFn: () => getTopStories(),
+    queryFn: getTopStories,
     // suspense: true,
     staleTime: 5 * 1000,
   });

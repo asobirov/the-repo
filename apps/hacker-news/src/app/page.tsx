@@ -1,4 +1,4 @@
-import { StoriesList } from '@/app/components/stories-list'
+import { StoriesList } from '@/components/stories-list'
 import Image from 'next/image'
 
 export default function Home() {
