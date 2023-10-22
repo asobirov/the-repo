@@ -36,8 +36,8 @@ importers:
         specifier: ^0.15.3
         version: 0.15.3(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
-        specifier: ^0.6.0
-        version: 0.6.0(typescript@5.2.2)(zod@3.22.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.2.2)(zod@3.22.3)
       '@tanstack/react-query':
         specifier: ^4.29.5
         version: 4.29.23(react-dom@18.2.0)(react@18.2.0)
@@ -155,8 +155,8 @@ importers:
         specifier: ^1.0.7
         version: 1.0.7(@prisma/client@5.0.0)(next-auth@4.22.1)
       '@t3-oss/env-nextjs':
-        specifier: ^0.6.0
-        version: 0.6.0(typescript@5.2.2)(zod@3.22.3)
+        specifier: ^0.7.1
+        version: 0.7.1(typescript@5.2.2)(zod@3.22.3)
       '@tr/db':
         specifier: ^0.1.0
         version: link:../db
@@ -1145,23 +1145,29 @@ packages:
       defer-to-connect: 1.1.3
     dev: false
 
-  /@t3-oss/env-core@0.6.0(typescript@5.2.2)(zod@3.22.3):
-    resolution: {integrity: sha512-3FkPAba069WRZVVab/sB1m3eSGn/rZeypx5k+sWEu1d+k0OQdRDnvFS+7MtxYgqVrwaRk3b7yVnX2dgSPVmWPQ==}
+  /@t3-oss/env-core@0.7.1(typescript@5.2.2)(zod@3.22.3):
+    resolution: {integrity: sha512-3+SQt39OlmSaRLqYVFv8uRm1BpFepM5TIiMytRqO9cjH+wB77o6BIJdeyM5h5U4qLBMEzOJWCY4MBaU/rLwbYw==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       typescript: 5.2.2
       zod: 3.22.3
     dev: false
 
-  /@t3-oss/env-nextjs@0.6.0(typescript@5.2.2)(zod@3.22.3):
-    resolution: {integrity: sha512-SpzcGNIbUYcQw4zPPFeRJqCC1560zL7QmB0puIqOnuCsmykPkqHPX+n9CNZLXVQerboHzfvb7Kd+jAdouk72Vw==}
+  /@t3-oss/env-nextjs@0.7.1(typescript@5.2.2)(zod@3.22.3):
+    resolution: {integrity: sha512-tQDbNLGCOvKGi+JoGuJ/CJInJI7/kLWJqtgGppAKS7ZFLdVOqZYR/uRjxlXOWPnxmUKF8VswOAsq7fXUpNZDhA==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
-      '@t3-oss/env-core': 0.6.0(typescript@5.2.2)(zod@3.22.3)
+      '@t3-oss/env-core': 0.7.1(typescript@5.2.2)(zod@3.22.3)
       typescript: 5.2.2
       zod: 3.22.3
     dev: false
