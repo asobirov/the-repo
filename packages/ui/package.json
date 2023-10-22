@@ -49,7 +49,7 @@
     "@tr/tailwind-config": "workspace:^",
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
-    "lucide-react": "^0.279.0",
+    "lucide-react": "^0.288.0",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animate": "^1.0.7"
   },
