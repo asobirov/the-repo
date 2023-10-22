@@ -33,8 +33,8 @@ importers:
   apps/excalidraw:
     dependencies:
       '@excalidraw/excalidraw':
-        specifier: ^0.15.2
-        version: 0.15.2(react-dom@18.2.0)(react@18.2.0)
+        specifier: ^0.15.3
+        version: 0.15.3(react-dom@18.2.0)(react@18.2.0)
       '@t3-oss/env-nextjs':
         specifier: ^0.6.0
         version: 0.6.0(typescript@5.2.2)(zod@3.22.3)
@@ -824,8 +824,8 @@ packages:
     resolution: {integrity: sha512-Ag+9YM4ocKQx9AarydN0KY2j0ErMHNIocPDrVo8zAE44xLTjEtz81OdR68/cydGtk6m6jDb5Za3r2useMzYmSw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  /@excalidraw/excalidraw@0.15.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-rTI02kgWSTXiUdIkBxt9u/581F3eXcqQgJdIxmz54TFtG3ughoxO5fr4t7Fr2LZIturBPqfocQHGKZ0t2KLKgw==}
+  /@excalidraw/excalidraw@0.15.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/gpY7fgMO/AEaFLWnPqzbY8H7ly+/zocFf7D0Is5sWNMD2mhult5tana12lXKLSJ6EAz7ubo1A7LajXzvJXJDA==}
     peerDependencies:
       react: ^17.0.2 || ^18.2.0
       react-dom: ^17.0.2 || ^18.2.0
