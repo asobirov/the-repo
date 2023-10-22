@@ -34,7 +34,7 @@ importers:
     dependencies:
       '@t3-oss/env-nextjs':
         specifier: ^0.7.1
-        version: 0.7.1(typescript@5.2.2)(zod@3.22.3)
+        version: 0.7.1(typescript@5.2.2)(zod@3.22.4)
       '@tanstack/react-query':
         specifier: ^4.29.5
         version: 4.29.23(react-dom@18.2.0)(react@18.2.0)
@@ -287,8 +287,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0(eslint@8.52.0)(typescript@5.2.2)
       eslint-config-prettier:
-        specifier: ^8.8.0
-        version: 8.8.0(eslint@8.52.0)
+        specifier: ^8.10.0
+        version: 8.10.0(eslint@8.52.0)
       eslint-config-turbo:
         specifier: ^1.10.16
         version: 1.10.16(eslint@8.52.0)
@@ -1137,11 +1137,14 @@ packages:
       defer-to-connect: 1.1.3
     dev: false
 
-  /@t3-oss/env-core@0.7.1(typescript@5.2.2)(zod@3.22.3):
-    resolution: {integrity: sha512-KQD7qEDJtkWIWWmTVjNvk0wnHpkvAQ6CRbUxbWMFNG/fiosBQDQvtRpBNu6USxBscJCoC4z6y7P9MN52/mLOzw==}
+  /@t3-oss/env-core@0.7.1(typescript@5.2.2)(zod@3.22.4):
+    resolution: {integrity: sha512-3+SQt39OlmSaRLqYVFv8uRm1BpFepM5TIiMytRqO9cjH+wB77o6BIJdeyM5h5U4qLBMEzOJWCY4MBaU/rLwbYw==}
     peerDependencies:
       typescript: '>=4.7.2'
       zod: ^3.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
     dependencies:
       typescript: 5.2.2
       zod: 3.22.4
@@ -2428,8 +2431,8 @@ packages:
       source-map: 0.6.1
     dev: false
 
-  /eslint-config-prettier@8.8.0(eslint@8.52.0):
-    resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
+  /eslint-config-prettier@8.10.0(eslint@8.52.0):
+    resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
