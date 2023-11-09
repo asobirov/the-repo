@@ -16,6 +16,10 @@
 - [ ] @tr/tts - Text to speech web app
 - [ ] @tr/cli - CLI app, includes some features from the web apps
 
+- [ ] @tr/todo - Todo app
+
+   - [https://github.com/gyrad/multi-todo](https://github.com/gyrad/multi-todo)
+
 ### packages
-- [ ] @tr/ui - Shared UI lib
+- [x] @tr/ui - Shared UI lib
       
