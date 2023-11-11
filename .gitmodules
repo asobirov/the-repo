@@ -1,3 +1,7 @@
 [submodule "apps/main"]
 	path = apps/main
 	url = https://github.com/asobirov/portfolio
+
+[submodule "apps/ryoku"]
+	path = apps/ryoku	
+	url = https://github.com/asobirov/ryoku

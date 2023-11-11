@@ -1,11 +1,10 @@
-# @tr
+# @tr/root
 
-<picture>
-   <source media="(prefers-color-scheme: dark)" alt="the repo deps" srcset="https://cdn.xpr.im/projects/ed/the-repo-deps-v0.0.1.png
-" />
-   <img alt="the repo deps" src="https://cdn.xpr.im/projects/ed/the-repo-deps-v0.0.1.png
-" />
-</picture>
+<p align="center">
+   <picture>
+      <img alt="After all, why not. Why shouldn't I monorepo for no reason" src="https://github.com/asobirov/the-repo/assets/48186272/aaf8f63f-2ce3-4fb6-ac12-f843d41e98cf" />
+   </picture>
+</p>
 
 ## TODO:
 
@@ -19,6 +18,10 @@
 - [ ] @tr/tts - Text to speech web app
 - [ ] @tr/cli - CLI app, includes some features from the web apps
 
+- [ ] @tr/todo - Todo app
+
+   - [https://github.com/gyrad/multi-todo](https://github.com/gyrad/multi-todo)
+
 ### packages
-- [ ] @tr/ui - Shared UI lib
+- [x] @tr/ui - Shared UI lib
       
