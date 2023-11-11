@@ -9,6 +9,8 @@
 ## TODO:
 
 ### apps
+- [x] @tr/hn - Hacker News web app
+
 - [ ] @tr/auth - Auth web app
 - [ ] @tr/ed - Excalidraw self-hosted web app
 - [ ] @tr/notes - Notes web app
