@@ -1,5 +1,5 @@
 {
-  "name": "@tr/hacker-news",
+  "name": "@tr/hn",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -16,7 +16,6 @@
     "@tanstack/react-query": "^4.35.3",
     "@tanstack/react-query-devtools": "^4.35.3",
     "@tanstack/react-query-next-experimental": "5.0.0-alpha.80",
-    "@tr/tsconfig": "workspace:^0.1.0",
     "@tr/ui": "workspace:^",
     "link-preview-js": "^3.0.5",
     "next": "^13.5.3",
@@ -27,9 +26,10 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
-    "@tr/eslint-config": "workspace:^",
-    "@tr/prettier-config": "workspace:^",
-    "@tr/tailwind-config": "workspace:^",
+    "@tr/eslint-config": "workspace:*",
+    "@tr/prettier-config": "workspace:*",
+    "@tr/tailwind-config": "workspace:*",
+    "@tr/tsconfig": "workspace:*",
     "@types/node": "^18.16.5",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",

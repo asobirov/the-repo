@@ -7,6 +7,7 @@ export type Story = {
   time: number;
   title: string;
   url: string;
+  type: string;
 };
 
 export type StoriesListItem = Story & {

@@ -5,8 +5,14 @@ import { StoriesListItem } from "@/types/stories";
 export const StoryItem: React.FC<{ story: StoriesListItem }> = ({ story }) => {
   return (
     <div className="flex flex-row space-x-6 rounded-2xl border p-4 shadow-md">
-      <div className="w-full whitespace-pre-wrap break-words">
+      <div className="flex w-full flex-col whitespace-pre-wrap break-words">
+        <h1 className="text-base font-semibold">{story.title}</h1>
         {JSON.stringify(story)}
+        <div className="flex justify-end">
+          <div className="w-min rounded-full bg-secondary px-3 py-1.5 text-xs">
+            {story.type}
+          </div>
+        </div>
       </div>
       <div className="w-40">
         <StoryItemPreview story={story} />
