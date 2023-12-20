@@ -24,7 +24,7 @@ export const StoryItem: React.FC<{ story: StoriesListItem }> = ({
         </div>
       </div>
       <div className="flex w-full flex-col whitespace-pre-wrap break-words">
-        <div className="flex flex-col justify-start gap-1">
+        <div className="flex flex-col items-start justify-start gap-1">
           <div className="w-min rounded-full bg-secondary px-3 py-1.5 text-[0.625rem] font-bold capitalize">
             {story.type}
           </div>
