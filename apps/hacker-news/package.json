@@ -18,7 +18,7 @@
     "@tanstack/react-query-next-experimental": "5.0.0-alpha.80",
     "@tr/ui": "workspace:^",
     "link-preview-js": "^3.0.5",
-    "next": "^13.5.3",
+    "next": "^14.0.0",
     "next-themes": "^0.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
