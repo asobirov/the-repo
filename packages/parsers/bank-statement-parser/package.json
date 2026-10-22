@@ -9,7 +9,7 @@
     "lint": "echo 'Add lint script here'"
   },
   "dependencies": {
-    "csv-parse": "^5.5.2",
+    "csv-parse": "^7.0.0",
     "csvtojson": "^2.0.10"
   }
 }
